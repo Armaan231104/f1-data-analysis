@@ -4,6 +4,7 @@ from fastapi import FastAPI
 
 from app.core.config import settings
 from app.core.db import init_db
+from app.routers import constructors, drivers, predictions
 from app.schemas import HealthResponse
 from app.services.keys_repo import seed_from_env
 
@@ -21,6 +22,11 @@ app = FastAPI(
     description="Formula 1 analytics and ML API with FastF1 ETL pipelines and PyTorch predictions.",
     lifespan=lifespan,
 )
+
+api_router_prefix = f"/api/{settings.api_version}"
+app.include_router(drivers.router, prefix=api_router_prefix)
+app.include_router(constructors.router, prefix=api_router_prefix)
+app.include_router(predictions.router, prefix=api_router_prefix)
 
 
 @app.get("/")

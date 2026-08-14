@@ -24,7 +24,7 @@ dev = [
 ]
 
 [tool.setuptools]
-packages = ["app", "app.core", "app.services", "etl", "ml"]
+packages = ["app", "app.core", "app.services", "app.routers", "etl", "ml"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
