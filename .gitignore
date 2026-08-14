@@ -8,6 +8,7 @@ __pycache__/
 *.pyd
 *.log
 *.egg-info/
+CLAUDE.md
 
 # Data artifacts
 /data/raw/fastf1_cache/
