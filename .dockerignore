@@ -1,0 +1,12 @@
+data/raw/fastf1_cache/
+data/processed/*.csv
+data/processed/*.parquet
+data/f1.db
+ml/artifacts/*.pt
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.git/
+.env

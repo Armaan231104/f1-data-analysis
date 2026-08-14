@@ -7,8 +7,14 @@ __pycache__/
 *.pyo
 *.pyd
 *.log
+*.egg-info/
 
 # Data artifacts
 /data/raw/fastf1_cache/
 /data/processed/*.csv
 /data/processed/*.parquet
+/data/f1.db
+
+# Model artifacts
+/ml/artifacts/*.pt
+!/ml/artifacts/.gitkeep
