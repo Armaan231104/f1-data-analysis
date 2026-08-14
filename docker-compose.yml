@@ -13,3 +13,5 @@ services:
       # Persists the FastF1 HTTP cache, the SQLite DB file, and ETL'd processed CSVs
       # across container rebuilds/restarts.
       - ./data:/app/data
+      # Persists the trained model checkpoint so a container rebuild doesn't require retraining.
+      - ./ml/artifacts:/app/ml/artifacts
